@@ -5,7 +5,7 @@ var alphabetscontroller = require('./controller/alphabetscontroller');
 var numbercontroller = require('./controller/numberscontroller');
 var colorcontroller = require('./controller/colorscontroller');
 var shapscontroller = require('./controller/shapscontroller');
-
+require('dotenv').config()
 var cors = require('cors');
 
 var bodyParser = require('body-parser');         
@@ -28,7 +28,7 @@ app.get('/getColors',colorcontroller.getColors);
 
 app.post('/addShaps',colorcontroller.addShaps);
 app.get('/getShaps',colorcontroller.getShaps);
-
-module.exports = app;
 app.listen(5000);
+module.exports = app;
+
 console.log("App listening");
