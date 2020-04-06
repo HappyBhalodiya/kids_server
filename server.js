@@ -26,8 +26,8 @@ app.get('/getNumbers',numbercontroller.getNumbers);
 app.post('/addColors',colorcontroller.addColors);
 app.get('/getColors',colorcontroller.getColors);
 
-app.post('/addShaps',colorcontroller.addShaps);
-app.get('/getShaps',colorcontroller.getShaps);
+// app.post('/addShaps',colorcontroller.addShaps);
+// app.get('/getShaps',colorcontroller.getShaps);
 app.listen(5000);
 module.exports = app;
 
