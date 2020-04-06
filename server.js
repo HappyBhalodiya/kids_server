@@ -17,14 +17,14 @@ app.use(cors());
 mongoose.connect("mongodb://localhost:27017/kids_app");
 console.log("connected");
 
-app.post('/addAlphabets',alphabetscontroller.addAlphabets);
-app.get('/getAlphabets',alphabetscontroller.getAlphabets);
+app.post('/addAlphabets', function(req, res){alphabetscontroller.addAlphabets});
+app.get('/getAlphabets',function(req, res){alphabetscontroller.getAlphabets});
 
-app.post('/addNumbers',numbercontroller.addNumbers);
-app.get('/getNumbers',numbercontroller.getNumbers);
+app.post('/addNumbers',function(req, res){numbercontroller.addNumbers});
+app.get('/getNumbers',function(req, res){numbercontroller.getNumbers});
 
-app.post('/addColors',colorcontroller.addColors);
-app.get('/getColors',colorcontroller.getColors);
+app.post('/addColors',function(req, res){colorcontroller.addColors});
+app.get('/getColors',function(req, res){colorcontroller.getColors});
 
 // app.post('/addShaps',colorcontroller.addShaps);
 // app.get('/getShaps',colorcontroller.getShaps);
