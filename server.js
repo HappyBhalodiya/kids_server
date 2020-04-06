@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());        
 app.use(cors());                            
 
-mongoose.connect("mongodb://localhost:27017/kids_app");
+mongoose.connect("mongodb://192.168.43.176:27017/kids_app");
 console.log("connected");
 
 app.post('/addAlphabets', function(req, res){alphabetscontroller.addAlphabets});
