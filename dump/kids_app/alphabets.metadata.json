@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"kids_app.alphabets"}],"uuid":"f0e2b350830241f78f1c2147fe99d5ca"}
