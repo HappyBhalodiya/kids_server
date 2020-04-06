@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());        
 app.use(cors());                            
 mongoose.connect('mongodb://localhost:27017/kids_app')
+// mongoose.connect("mongodb+srv://kidsapp:kidsapp@cluster0-8buxd.mongodb.net/test?retryWrites=true&w=majority")
 
 console.log("connected");
 
