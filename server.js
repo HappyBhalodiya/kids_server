@@ -13,12 +13,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({'extended':'true'}));           
 app.use(bodyParser.json());        
 app.use(cors());                            
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/kids_app')
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/kids_app').then(() => {
-console.log("Connected to Database");
-}).catch((err) => {
-    console.log("Not Connected to Database ERROR! ", err);
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/kids_app')
+
 console.log("connected");
 
 app.post('/addAlphabets', alphabetscontroller.addAlphabets);
