@@ -7,6 +7,8 @@ var colorcontroller = require('./controller/colorscontroller');
 var shapscontroller = require('./controller/shapscontroller');
 require('dotenv').config()
 var cors = require('cors');
+const fileUpload = require('./middleware/file_upload');
+
 
 var bodyParser = require('body-parser');         
 
@@ -18,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/kids_app')
 
 console.log("connected");
 
-app.post('/addAlphabets', alphabetscontroller.addAlphabets);
+app.post('/addAlphabets', fileUpload.upload('alphabetsimage'),alphabetscontroller.addAlphabets);
 app.get('/getAlphabets',alphabetscontroller.getAlphabets);
 
 app.post('/addNumbers',numbercontroller.addNumbers);
