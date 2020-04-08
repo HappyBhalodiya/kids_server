@@ -7,7 +7,7 @@ alphabetscontroller.addAlphabets = function (req, res) {
 	
 	const userData = {
 		alphabets: req.body.alphabets,
-		alphabetsimage: req.file.filename,
+		alphabetsimage: req.file.originalname,
 		path:req.file.path,
 		text_to_speech :req.body.text_to_speech
 	}

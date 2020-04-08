@@ -12,7 +12,7 @@ const upload = (file, next) => {
             },
             filename: function (req, file, cb) {
                 console.log("middelware file:", file)
-                cb(null, file.fieldname + '_' + Date.now())
+                cb(null, Date.now() + '_' + file.originalname)
             }
         })
         return multer({ storage: storage }).single(file);
