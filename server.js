@@ -29,8 +29,8 @@ app.get('/getNumbers',numbercontroller.getNumbers);
 app.post('/addColors',colorcontroller.addColors);
 app.get('/getColors',colorcontroller.getColors);
 
-// app.post('/addShaps',colorcontroller.addShaps);
-// app.get('/getShaps',colorcontroller.getShaps);
+app.post('/addShapes', fileUpload.upload('shapesimg'),shapscontroller.addShapes);
+app.get('/getShapes',shapscontroller.getShapes);
 
 const port = 5000;
 app.listen(port);
