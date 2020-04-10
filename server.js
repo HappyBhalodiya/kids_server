@@ -5,6 +5,11 @@ var alphabetscontroller = require('./controller/alphabetscontroller');
 var numbercontroller = require('./controller/numberscontroller');
 var colorcontroller = require('./controller/colorscontroller');
 var shapscontroller = require('./controller/shapscontroller');
+var animalscontroller = require('./controller/animalscontroller');
+var fruitscontroller = require('./controller/fruitscontroller');
+var vegetablescontroller = require('./controller/vegetablescontroller');
+
+
 require('dotenv').config()
 var cors = require('cors');
 const fileUpload = require('./middleware/file_upload');
@@ -31,6 +36,16 @@ app.get('/getColors',colorcontroller.getColors);
 
 app.post('/addShapes', fileUpload.upload('shapesimg'),shapscontroller.addShapes);
 app.get('/getShapes',shapscontroller.getShapes);
+
+app.post('/addAnimals', fileUpload.upload('animalsimg'),animalscontroller.addAnimals);
+app.get('/getAnimals',animalscontroller.getAnimals);
+
+app.post('/addFruits', fileUpload.upload('fruitsimg'),fruitscontroller.addFruits);
+app.get('/getFruits',fruitscontroller.getFruits);
+
+app.post('/addVegetables', fileUpload.upload('vegetablesimg'),vegetablescontroller.addVegetables);
+app.get('/getVegetables',vegetablescontroller.getVegetables);
+
 
 const port = 5000;
 app.listen(port);
