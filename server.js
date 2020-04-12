@@ -10,8 +10,7 @@ var fruitscontroller = require('./controller/fruitscontroller');
 var vegetablescontroller = require('./controller/vegetablescontroller');
 var dayscontroller = require('./controller/dayscontroller');
 var monthscontroller = require('./controller/monthscontroller');
-
-
+var vehiclescontroller = require('./controller/vehiclescontroller');
 
 require('dotenv').config()
 var cors = require('cors');
@@ -54,6 +53,9 @@ app.get('/getDays',dayscontroller.getDays);
 
 app.post('/addMonths', fileUpload.upload('monthsimg'),monthscontroller.addMonths);
 app.get('/getMonths',monthscontroller.getMonths);
+
+app.post('/addVehicles', fileUpload.upload('vehiclesimg'),vehiclescontroller.addVehicles);
+app.get('/getVehicles',vehiclescontroller.getVehicles);
 
 
 const port = 5000;
