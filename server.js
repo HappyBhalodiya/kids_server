@@ -9,6 +9,7 @@ var animalscontroller = require('./controller/animalscontroller');
 var fruitscontroller = require('./controller/fruitscontroller');
 var vegetablescontroller = require('./controller/vegetablescontroller');
 var dayscontroller = require('./controller/dayscontroller');
+var monthscontroller = require('./controller/monthscontroller');
 
 
 
@@ -50,6 +51,10 @@ app.get('/getVegetables',vegetablescontroller.getVegetables);
 
 app.post('/addDays', fileUpload.upload('daysimg'),dayscontroller.addDays);
 app.get('/getDays',dayscontroller.getDays);
+
+app.post('/addMonths', fileUpload.upload('monthsimg'),monthscontroller.addMonths);
+app.get('/getMonths',monthscontroller.getMonths);
+
 
 const port = 5000;
 app.listen(port);
