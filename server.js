@@ -8,6 +8,8 @@ var shapscontroller = require('./controller/shapscontroller');
 var animalscontroller = require('./controller/animalscontroller');
 var fruitscontroller = require('./controller/fruitscontroller');
 var vegetablescontroller = require('./controller/vegetablescontroller');
+var dayscontroller = require('./controller/dayscontroller');
+
 
 
 require('dotenv').config()
@@ -46,6 +48,8 @@ app.get('/getFruits',fruitscontroller.getFruits);
 app.post('/addVegetables', fileUpload.upload('vegetablesimg'),vegetablescontroller.addVegetables);
 app.get('/getVegetables',vegetablescontroller.getVegetables);
 
+app.post('/addDays', fileUpload.upload('daysimg'),dayscontroller.addDays);
+app.get('/getDays',dayscontroller.getDays);
 
 const port = 5000;
 app.listen(port);
