@@ -21,7 +21,14 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({'extended':'true'}));           
 app.use(bodyParser.json());        
-app.use(cors());                            
+app.use(cors());        
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true)
+
+                    
 mongoose.connect('mongodb://localhost:27017/kids_app').then( () => {
 	console.log("connected server")
 }).catch( (err) => {
