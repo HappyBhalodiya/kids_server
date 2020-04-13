@@ -28,8 +28,8 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true)
 
-                    
-mongoose.connect('mongodb://localhost:27017/kids_app').then( () => {
+
+mongoose.connect('mongodb://192.168.43.176:27017/kids_app').then( () => {
 	console.log("connected server")
 }).catch( (err) => {
 	console.log(err)
